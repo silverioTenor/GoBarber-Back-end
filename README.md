@@ -1,6 +1,6 @@
 # GoBarber Back-end
 
-Este projeto está sendo desenvolvido durante o bootcamp da Rocketseat, o GoStack.
+#### Este projeto está sendo desenvolvido durante o bootcamp da Rocketseat, o GoStack.
 
 ## Objetivo
 
