@@ -2,7 +2,16 @@
   "type": "postgres",
   "host": "localhost",
   "port": 5433,
-  "username": "docker",
+  "username": "postgres",
   "password": "artropode23",
-  "database": "gobarber_db"
+  "database": "gobarber_db",
+  "entities": [
+    "./src/models/*.ts"
+  ],
+  "migrations": [
+    "./src/database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }
