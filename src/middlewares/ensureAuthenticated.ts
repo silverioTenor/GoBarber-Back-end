@@ -10,7 +10,7 @@ interface TokenPayload {
   sub: string;
 }
 
-export default function ensureAuthenticated(
+function ensureAuthenticated(
   request: Request,
   response: Response,
   next: NextFunction,
@@ -33,3 +33,5 @@ export default function ensureAuthenticated(
     throw new AppError('JWT token is missing');
   }
 }
+
+export default ensureAuthenticated;

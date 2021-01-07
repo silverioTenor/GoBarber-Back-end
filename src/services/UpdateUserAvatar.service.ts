@@ -25,9 +25,7 @@ class UpdateUserAvatarService {
 
       const userAvatarFileExist = await fs.promises.stat(userAvatarFilePath);
 
-      if (userAvatarFileExist) {
-        await fs.promises.unlink(userAvatarFilePath);
-      }
+      if (userAvatarFileExist) await fs.promises.unlink(userAvatarFilePath);
     }
 
     user.avatar = avatarFilename;
