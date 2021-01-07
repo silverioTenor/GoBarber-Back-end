@@ -26,6 +26,12 @@
     "prettier/prettier": "error",
     "class-methods-use-this": "off",
     "camelcase": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 90
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
