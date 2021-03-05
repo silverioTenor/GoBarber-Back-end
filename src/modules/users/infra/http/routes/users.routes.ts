@@ -1,11 +1,11 @@
 import { Router } from 'express';
 import multer from 'multer';
-import uploadConfig from '../config/upload';
+import uploadConfig from '@config/upload';
 
-import CreateUsersService from '../services/CreateUser.service';
-import UpdateUserAvatarService from '../services/UpdateUserAvatar.service';
+import CreateUsersService from '@modules/users/services/CreateUser.service';
+import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatar.service';
 
-import ensureAuthenticated from '../middlewares/ensureAuthenticated';
+import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated';
 
 const usersRouter = Router();
 const upload = multer(uploadConfig);
