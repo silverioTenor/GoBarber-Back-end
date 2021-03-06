@@ -8,7 +8,7 @@ import uploadConfig from '@config/upload';
 import AppError from '@shared/errors/AppError';
 import routes from './routes';
 
-import '../typeorm';
+import '@shared/infra/typeorm';
 
 const app = express();
 
@@ -33,4 +33,4 @@ app.use((err: Error, request: Request, response: Response, _next: NextFunction) 
   });
 });
 
-app.listen(3333, () => console.log('Server is running in the port 3333...'));
+app.listen(3333, () => console.log('🚀 Server is running in the port 3333...'));
