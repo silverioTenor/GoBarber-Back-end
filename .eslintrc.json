@@ -1,7 +1,8 @@
 {
   "env": {
     "es6": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "extends": [
     "airbnb-base",
@@ -45,12 +46,6 @@
         "argsIgnorePattern": "_"
       }
     ],
-    // "max-len": [
-    //   "error",
-    //   {
-    //     "code": 90
-    //   }
-    // ],
     "import/extensions": [
       "error",
       "ignorePackages",
