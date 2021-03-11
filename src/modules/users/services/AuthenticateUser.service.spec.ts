@@ -17,7 +17,7 @@ describe('AuthenticateUser', () => {
       fakeHashProvider,
     );
 
-    await createUsers.execute({
+    const user = await createUsers.execute({
       name: 'John Doe',
       email: 'john_doe@gmail.com',
       password: '123456',
@@ -29,6 +29,7 @@ describe('AuthenticateUser', () => {
     });
 
     expect(response).toHaveProperty('token');
+    expect(response.user).toEqual(user);
   });
 
   it('Should not be able to Authenticate user with incorrect email', async () => {
