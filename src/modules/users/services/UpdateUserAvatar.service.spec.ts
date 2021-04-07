@@ -36,7 +36,7 @@ describe('UpdateUserAvatar', () => {
   });
 
   it('Should not be able to update user avatar', async () => {
-    expect(
+    await expect(
       updateUserAvatar.execute({
         user_id: '',
         avatarFilename: 'asadelta',
