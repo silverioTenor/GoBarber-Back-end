@@ -4,9 +4,9 @@ import { container } from 'tsyringe';
 import ShowProfileService from '@modules/users/services/ShowProfile.service';
 import UpdateProfileService from '@modules/users/services/UpdateProfile.service';
 
-export default class UsersController {
+export default class ProfileController {
   public async show(request: Request, response: Response): Promise<Response> {
-    const { user_id } = request.body;
+    const user_id = request.user.id;
 
     const showProfile = container.resolve(ShowProfileService);
 
@@ -16,7 +16,9 @@ export default class UsersController {
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
-    const { user_id, name, email, old_password, password } = request.body;
+    const user_id = request.user.id;
+
+    const { name, email, old_password, password } = request.body;
 
     const updateProfile = container.resolve(UpdateProfileService);
 
@@ -27,6 +29,8 @@ export default class UsersController {
       old_password,
       password,
     });
+
+    user.password = '';
 
     return response.json(user);
   }

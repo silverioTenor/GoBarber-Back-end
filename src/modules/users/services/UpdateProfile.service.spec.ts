@@ -9,7 +9,7 @@ let fakeUsersRepository: FakeUsersRepository;
 let fakeHashProvider: FakeHashProvider;
 let updateProfile: UpdateProfile;
 
-describe('UpdateUserAvatar', () => {
+describe('UpdateProfile', () => {
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository();
     fakeHashProvider = new FakeHashProvider();
