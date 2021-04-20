@@ -22,6 +22,7 @@ describe('ListProviderMonthAvailability', () => {
     const appointmentsPromise = iterator.map(i => {
       return fakeAppointmentsRepository.create({
         provider_id: 'user',
+        user_id: 'user',
         date: new Date(2021, 4, 20, i, 0, 0),
       });
     });
@@ -30,6 +31,7 @@ describe('ListProviderMonthAvailability', () => {
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: 'user',
       date: new Date(2021, 4, 21, 8, 0, 0),
     });
 
